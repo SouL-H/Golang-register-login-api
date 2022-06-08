@@ -42,17 +42,3 @@ func (hum Human) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	// </tr>
 	// </table>")
 }
-
-func Run() {
-
-	var hum Human
-	err := http.ListenAndServe("localhost:8080", hum)
-
-	checkError(err)
-}
-
-func checkError(err error) {
-	if err != nil {
-		panic(err)
-	}
-}
